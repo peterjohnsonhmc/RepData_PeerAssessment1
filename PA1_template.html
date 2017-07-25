@@ -167,21 +167,8 @@ hist(table_steps$steps,main="Histogram of Total Number of Steps per Day",
 ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png)
 
 ```r
-dev.copy(png,"HistNumSteps.png")
-```
-
-```
-## png 
-##   3
-```
-
-```r
-dev.off()
-```
-
-```
-## png 
-##   2
+#dev.copy(png,"HistNumSteps.png")
+#dev.off()
 ```
 
 3.Calculate the mean and median
@@ -208,21 +195,8 @@ plot(interval_steps$interval,interval_steps$steps,type="l",
 ![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png)
 
 ```r
-dev.copy(png,"AVGNumSteps.png")
-```
-
-```
-## png 
-##   3
-```
-
-```r
-dev.off()
-```
-
-```
-## png 
-##   2
+#dev.copy(png,"AVGNumSteps.png")
+#dev.off()
 ```
 
 2. Which 5-minute interval on average contains the maximum number of steps?
@@ -339,24 +313,8 @@ hist(imputed_table_steps$steps,main="Histogram of Total Number of Steps per Day 
 ![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png)
 
 ```r
-dev.copy(png,"HistImputedSteps.png")
-```
-
-```
-## png 
-##   3
-```
-
-```r
-dev.off()
-```
-
-```
-## png 
-##   2
-```
-
-```r
+#dev.copy(png,"HistImputedSteps.png")
+#dev.off()
 imputed_mean <- mean(imputed_table_steps$steps)
 imputed_median <- median(imputed_table_steps$steps)
 ```
@@ -402,21 +360,8 @@ qplot(interval,steps,data=imputed_data,
 ![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14-1.png)
 
 ```r
-dev.copy(png,"StepsTimeSeries.png")
-```
-
-```
-## png 
-##   3
-```
-
-```r
-dev.off()
-```
-
-```
-## png 
-##   2
+#dev.copy(png,"StepsTimeSeries.png")
+#dev.off()
 ```
 
 

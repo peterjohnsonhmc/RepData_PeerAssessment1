@@ -59,8 +59,8 @@ table_steps #date is first col, steps is 2nd
 
 hist(table_steps$steps,main="Histogram of Total Number of Steps per Day",
      xlab="Total Number of Steps in a day")
-dev.copy(png,"HistNumSteps.png")
-dev.off()
+#dev.copy(png,"HistNumSteps.png")
+#dev.off()
 ```
 
 3.Calculate the mean and median
@@ -80,8 +80,8 @@ interval_steps <- aggregate(formula= steps~interval,data=good_data,FUN=mean)
 plot(interval_steps$interval,interval_steps$steps,type="l",
      main="Average number of steps over all days",
      ylab="Steps Taken", xlab="Interval")
-dev.copy(png,"AVGNumSteps.png")
-dev.off()
+#dev.copy(png,"AVGNumSteps.png")
+#dev.off()
 ```
 
 2. Which 5-minute interval on average contains the maximum number of steps?
@@ -120,8 +120,8 @@ imputed_table_steps <- aggregate(steps~date,imputed_data,sum)
 imputed_table_steps #date is first col, steps is 2nd
 hist(imputed_table_steps$steps,main="Histogram of Total Number of Steps per Day (Imputed)",
      xlab="Total Number of Steps in a day")
-dev.copy(png,"HistImputedSteps.png")
-dev.off()
+#dev.copy(png,"HistImputedSteps.png")
+#dev.off()
 imputed_mean <- mean(imputed_table_steps$steps)
 imputed_median <- median(imputed_table_steps$steps)
 ```
@@ -152,8 +152,8 @@ library(ggplot2)
 qplot(interval,steps,data=imputed_data,
       geom=c("line"),xlab="Interval",ylab="Number of steps",ylim=c(0,300)
       )+facet_wrap(~day,ncol=1)
-dev.copy(png,"StepsTimeSeries.png")
-dev.off()
+#dev.copy(png,"StepsTimeSeries.png")
+#dev.off()
 ```
 
 
